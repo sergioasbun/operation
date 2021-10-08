@@ -12,10 +12,16 @@ namespace api_addition.Controllers
     public class AdditionController : ControllerBase
     {
         [HttpGet]
-
+        [Route("Add")]
         public int Add(int NumA, int NumB)
         {
         return (NumA + NumB);
+        }
+        [HttpGet]
+        [Route("Mult")]
+        public int Mult(int NumA, int NumB)
+        {
+            return (NumA * NumB);
         }
 
     }
